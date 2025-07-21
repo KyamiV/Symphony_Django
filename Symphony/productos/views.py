@@ -39,11 +39,11 @@ def inicio(request):
    """Vista para la página de inicio de Symphony"""
    context = {
        'tienda': 'Symphony',
-       'descripcion': 'Venta de productos musicales',
+       'descripcion': '¡Somos una escuela de música que te ayuda a impulsar tu desarrollo musical!',
    }
    return render(request, 'base.html', context)
 
 #al final de views.py, se define la vista inicio que renderiza la plantilla base.html con un contexto que incluye el nombre de la tienda y una descripción. Esta vista se utiliza para mostrar la página de inicio de la aplicación Symphony.
 def inicio(request):
-   context = {'tienda': 'Symphony', 'descripcion': 'Venta de productos musicales'}
+   context = {'tienda': 'Symphony', 'descripcion': '¡Somos una escuela de música que te ayuda a impulsar tu desarrollo musical!'}
    return render(request, 'inicio.html', context)
