@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Inicio - {{ tienda }}{% endblock title %}
+{% load static %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productos/css/inicio.css' %}">
+{% endblock %}
+
 {% block content %}
-<div class="text-center py-5">
-   <h1>¡Bienvenidos a {{ tienda }}!</h1>
-   <p class="lead">{{ descripcion }}</p>
-   <a href="{% url 'productos:lista' %}" class="btn btn-primary btn-lg mt-3">
-       Ver productos
-   </a>
-</div>
-{% endblock content %}
+<div class="titulo-principal">Symphony</div>
+
+<header>
+    <h1>🎼 ¡Bienvenido a Symphony!</h1>
+    <p>{{ descripcion }}</p>
+</header>
+
+    <!-- Si ya tienes el encabezado en base.html, no lo repitas aquí -->
+
+<a href="{% url 'productos:lista' %}" class="btn-ver-clases">
+    Ver Clases de Música Disponibles 🎵
+</a>
+{% endblock %}

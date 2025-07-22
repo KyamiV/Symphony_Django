@@ -5,7 +5,11 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 STATIC_URL= '/static/'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 STATICFILES_DIRS = [
     #os.path.join(BASE_DIR, 'staticfiles'),
@@ -36,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',  
     'productos.apps.ProductosConfig', # Aplicación de productos
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

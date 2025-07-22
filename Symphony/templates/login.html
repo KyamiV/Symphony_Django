@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido a Symphony</title>
+  <link rel="stylesheet" href="{% static 'productos/css/login.css' %}">
+</head>
+<body>
+  <div class="contenedor-login">
+    <h1>🎼 ¡Bienvenido a Symphony!</h1>
+    <p class="frase">¡Somos una escuela de música que te ayuda a impulsar tu desarrollo musical!</p>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+</body>
+</html>

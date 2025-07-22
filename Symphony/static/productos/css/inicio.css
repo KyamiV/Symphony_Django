@@ -1,0 +1,59 @@
+
+.titulo-principal {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #5C33F6;
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+header {
+    margin-top: 40px;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+
+}
+
+.btn-ver-clases {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: #6064db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-ver-clases:hover {
+    background-color: #151981;
+}

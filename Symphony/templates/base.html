@@ -4,6 +4,7 @@
 
 
 <head>
+ <link rel="stylesheet" href="{% static 'productos/css/navbar.css' %}">
  <meta charset="UTF-8">
  <title>{% block title %}{{ tienda }}{% endblock title %}</title>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +13,17 @@
 
 
 <body>
+  <!-- Menú Hamburguesa -->
+<input type="checkbox" id="toggle-menu">
+<label for="toggle-menu" class="menu-icon">☰</label>
+
+<nav class="menu-hamburguesa">
+  <ul class="menu-links">
+    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+    <li><a href="{% url 'productos:lista' %}">Ver clases musicales</a></li>
+    <li><a href="{% url 'productos:login' %}">Iniciar sesión</a></li>
+  </ul>
+</nav>
  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
    <div class="container">
      <a class="navbar-brand" href="{% url 'inicio' %}">{{ tienda }}</a>

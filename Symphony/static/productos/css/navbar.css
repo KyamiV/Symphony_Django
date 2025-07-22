@@ -1,0 +1,43 @@
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+.menu-hamburguesa {
+    position: relative;
+    z-index: 999;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.menu-links {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    list-style: none;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#toggle-menu:checked + .menu-icon + .menu-hamburguesa .menu-links {
+    display: block;
+}
+
+.menu-links li {
+    margin: 0.5rem 0;
+}
+
+.menu-links a {
+    color: #6064db;
+    text-decoration: none;
+    font-weight: bold;
+}
