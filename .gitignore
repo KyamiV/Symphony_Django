@@ -1,1 +1,16 @@
 .venv
+# Ignorar entorno virtual local
+envEDGAR/
+
+# Ignorar cachés y archivos compilados
+__pycache__/
+*.py[cod]
+
+# Ignorar configuraciones editoriales y archivos temporales
+.vscode/
+*.log
+*.sqlite3
+*.tmp
+
+# Ignorar datos sensibles o locales
+.env
