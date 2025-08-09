@@ -1,15 +1,18 @@
+# productos/urls.py
 from django.contrib.auth import views as auth_views
 from django.urls import path
-from. import views
+from . import views
 
-app_name = "productos"  # Nombre del espacio de nombres de la aplicación
+app_name = "productos"
 
-urlpatterns = [  # Definimos las rutas de la aplicación productos
+urlpatterns = [
     path('', views.inicio, name='inicio'),
-    path('clases/', views.lista_productos, name='lista'),  # Ruta para la lista de productos
-    path('nuevo/', views.create_product, name='nuevo'),  # Ruta para crear un nuevo producto
-    path('editar/<int:pk>/', views.edit_product, name='editar'),  # Ruta para editar un producto existente
-    path('eliminar/<int:pk>/', views.delete_product, name='eliminar'),  # Ruta para eliminar un producto
+    path('clases/', views.lista_productos, name='lista'),
+    path('clases/<int:pk>/', views.ver_clase, name='ver_clase'),
+    path('clases/<int:pk>/inscribirse/', views.inscribirse, name='inscribirse'),
+    path('clases/crear/', views.create_product, name='crear'),
+    path('clases/editar/<int:pk>/', views.edit_product, name='editar'),
+    path('clases/eliminar/<int:pk>/', views.delete_product, name='eliminar'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='productos:login'), name='logout'),
 ]

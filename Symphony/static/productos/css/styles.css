@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2b2d42;
+}
+
+/* Tabla estilizada */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeInTable 0.5s ease-out;
+}
+
+/* Encabezados */
+.table th {
+  background-color: #6064db;
+  color: #fff;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Celdas */
+.table td {
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  color: #333;
+}
+
+/* Hover en filas */
+.table tr:hover {
+  background-color: #f1f3f5;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Botones dentro de la tabla */
+.table .btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  margin-right: 0.4rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.table .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Botón editar */
+.table .btn-edit {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+/* Botón eliminar */
+.table .btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+@keyframes fadeInTable {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}

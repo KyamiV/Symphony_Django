@@ -1,4 +1,3 @@
-<!-- templates/productos/clase_list.html -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -6,12 +5,36 @@
     <meta charset="UTF-8">
     <title>Listado de clases musicales</title>
     <link rel="stylesheet" href="{% static 'productos/css/clases.css' %}">
+    <style>
+        .btn-agregar, .btn-regresar {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-agregar:hover {
+            background-color: #7b1fa2;
+        }
+        .btn-regresar {
+            background-color: #444;
+        }
+        .btn-regresar:hover {
+            background-color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>🎶 Clases disponibles en Symphony</h1>
         <p>Explora y organiza tus sesiones musicales.</p>
-        <a href="{% url 'productos:nuevo' %}" class="btn-agregar">➕ Agregar nueva clase</a>
+        <a href="{% url 'productos:crear' %}" class="btn-agregar">➕ Agregar nueva clase</a>
     </header>
 
     <main>
@@ -42,7 +65,6 @@
             </tbody>
         </table>
 
-        <!-- Paginación -->
         <div class="paginacion">
             {% if clases.has_previous %}
                 <a href="?page={{ clases.previous_page_number }}">« Anterior</a>
@@ -52,10 +74,11 @@
                 <a href="?page={{ clases.next_page_number }}">Siguiente »</a>
             {% endif %}
         </div>
-
         {% else %}
         <p>No hay clases registradas aún 🎻</p>
         {% endif %}
+
+        <a href="{% url 'productos:inicio' %}" class="btn-regresar">← Regresar</a>
     </main>
 </body>
 </html>

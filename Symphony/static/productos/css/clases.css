@@ -1,41 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fafafa;
-    padding: 2rem;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  padding: 2rem;
+  text-align: center;
+  color: #2b2d42;
 }
 
 h1 {
-    color: #2b2d42;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
-.btn-agregar {
-    background: #6064db;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+.btn-symphony {
+  background: #6064db;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-symphony:hover {
+  background-color: #151981;
+  transform: scale(1.03);
 }
 
 table.tabla-clases {
-    width: 100%;
-    margin-top: 2rem;
-    border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th {
+  background-color: #6064db;
+  color: white;
+  font-weight: 600;
 }
 
 table th, table td {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 .paginacion {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
+
 .paginacion a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #6064db;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #6064db;
+  font-weight: 500;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.sin-cupos {
+    color: red;
+    font-weight: bold;
 }

@@ -1,22 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block head %}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'productos/css/inicio.css' %}">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'productos/css/clases.css' %}">
+<style>
+  .btn-ver-clases {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #6a1b9a;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  .btn-ver-clases:hover {
+      background-color: #7b1fa2;
+  }
+</style>
 {% endblock %}
 
 {% block content %}
-<div class="titulo-principal">Symphony</div>
+<div class="container py-5 text-center">
 
-<header>
-    <h1>🎼 ¡Bienvenido a Symphony!</h1>
-    <p>{{ descripcion }}</p>
-</header>
+  <h1 class="mb-4">🎼 Bienvenido a Symphony</h1>
 
-    <!-- Si ya tienes el encabezado en base.html, no lo repitas aquí -->
+  <p class="lead mb-4">
+    Tu sistema de clases musicales. Organiza, edita y gestiona tus sesiones con estilo y precisión.
+  </p>
 
-<a href="{% url 'productos:lista' %}" class="btn-ver-clases">
-    Ver Clases de Música Disponibles 🎵
-</a>
+  <img src="{% static 'productos/img/music_.png' %}" alt="Imagen musical actualizada" class="img-fluid rounded shadow" style="max-width: 500px;">
+
+  <div class="d-flex justify-content-center mt-4">
+    <a href="{% url 'productos:lista' %}" class="btn-ver-clases btn btn-lg shadow" role="button" aria-label="Ver clases disponibles">
+      🎶 Ver clases disponibles
+    </a>
+  </div>
+
+</div>
 {% endblock %}
